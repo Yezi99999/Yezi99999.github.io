@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const skills = ['Vue', 'TypeScript', 'Node.js', 'Astro'];
+---
+
+<BaseLayout title="Yezi99999" description="Yezi 的个人站点 — 由 Astro 构建，托管于 GitHub Pages">
+  <main>
+    <h1>Yezi99999</h1>
+    <p class="lead">个人站点 · 由 Astro 构建 · 托管于 GitHub Pages</p>
+
+    <section>
+      <h2>关于</h2>
+      <p>
+        这里是 <code>Yezi99999.github.io</code> 的首页占位内容。
+        编辑 <code>src/pages/index.astro</code> 即可替换成你自己的内容。
+      </p>
+    </section>
+
+    <section>
+      <h2>技术栈</h2>
+      <ul>
+        {skills.map((skill) => <li>{skill}</li>)}
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(:root) {
+    color-scheme: dark;
+  }
+
+  :global(body) {
+    margin: 0;
+    padding: 3rem 1.5rem;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.7;
+  }
+
+  main {
+    max-width: 42rem;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 3rem);
+    letter-spacing: -0.02em;
+  }
+
+  .lead {
+    margin-top: 0.5rem;
+    color: #94a3b8;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    font-size: 1.15rem;
+    color: #7dd3fc;
+  }
+
+  code {
+    padding: 0.15em 0.4em;
+    border-radius: 4px;
+    background: #1e293b;
+    font-size: 0.9em;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+</style>
